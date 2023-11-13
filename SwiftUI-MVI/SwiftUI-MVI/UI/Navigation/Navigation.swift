@@ -17,12 +17,10 @@ enum NavigationViewType: Hashable {
     func build() -> some View {
         switch self {
         case .list:
-//            ListScreen.build()
-            EmptyView()
+            ListView()
             
         case .detail:
-//            DetailScreen.build(id: id)
-            EmptyView()
+            DetailView()
         }
     }
 }

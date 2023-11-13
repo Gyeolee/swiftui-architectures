@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct ListView: View {
+    @EnvironmentObject var navigator: Navigator
+    
     var body: some View {
-        Text("List View")
+        Button("Detail", action: { navigator.push(to: .detail) })
     }
 }
 
