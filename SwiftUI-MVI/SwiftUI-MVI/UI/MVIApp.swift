@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MVIApp: App {
+    @StateObject var navigator: Navigator = .init()
+    
     var body: some Scene {
         WindowGroup {
             RootView()
+                .environmentObject(navigator)
         }
     }
 }
