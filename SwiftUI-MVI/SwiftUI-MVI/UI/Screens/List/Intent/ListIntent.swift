@@ -18,16 +18,6 @@ class ListIntent: ListIntentProtocol {
         do {
             let responseData = try await albumsClient.getNewReleases(offset: offset)
             let albumsData = responseData.albums
-//            let itemsState = albumsModel.items.map {
-//                let image = $0.images.first { $0.width == 640 }!
-//                return ListItemState(
-//                    albumId: $0.id,
-//                    albumName: $0.name,
-//                    albumThumbnailUrl: image.url,
-//                    artistNames: $0.artists.map { $0.name }
-//                )
-//            }
-//            actionModel.newReleaseAlbumItems(itemsState)
             actionsModel.update(albumsData.items)
             
             offset += albumsData.limit

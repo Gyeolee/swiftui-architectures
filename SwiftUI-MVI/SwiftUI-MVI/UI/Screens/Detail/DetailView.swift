@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct DetailView: View {
+    @EnvironmentObject var navigator: Navigator
+    
     var body: some View {
         Text("Detail View")
+            .navigationBarBackButtonHidden(true)
+            .toolbar {
+                ToolbarItem(placement: .navigation) {
+                    Button(action: navigator.pop) {
+                        HStack {
+                            Image(systemName: "chevron.backward")
+                            Text("Go Back")
+                        }
+                    }
+                }
+            }
     }
 }
 

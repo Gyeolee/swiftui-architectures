@@ -23,7 +23,8 @@ struct ListView: View {
                     }
                     .padding(.horizontal)
                 }
-            }.padding(.vertical)
+            }
+            .padding(.vertical)
         }
         .task {
             await intent.viewOnTask()
