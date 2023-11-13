@@ -8,10 +8,10 @@
 import Alamofire
 
 struct TokenClient {
-    let agent: APIAgent = .init(interceptor: nil)
+    private let agent: APIAgent = .init(interceptor: nil)
     
-    func postToken() async throws -> TokenResponseModel {
-        let requestModel = TokenRequestModel(
+    func postToken() async throws -> TokenResponseDataModel {
+        let requestDataModel = TokenRequestDataModel(
             grantType: APIConfig.grantType,
             clientId: APIConfig.clientId,
             clientSecret: APIConfig.clientSecret
@@ -19,7 +19,7 @@ struct TokenClient {
         return try await agent.run(
             API.AccessToken.token.url,
             method: .post,
-            parameters: requestModel.parameters,
+            parameters: requestDataModel.parameters,
             encoding: URLEncoding.httpBody
         )
     }

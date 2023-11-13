@@ -17,7 +17,7 @@ enum NavigationViewType: Hashable {
     func build() -> some View {
         switch self {
         case .list:
-            ListView()
+            ListView.build()
             
         case .detail:
             DetailView()

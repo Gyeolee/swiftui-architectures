@@ -5,9 +5,9 @@
 //  Created by Hangyeol on 11/13/23.
 //
 
-// MARK: - Request Model
+// MARK: - Request Data Model
 
-struct TokenRequestModel: Encodable {
+struct TokenRequestDataModel: Encodable {
     let grantType: String
     let clientId: String
     let clientSecret: String
@@ -19,9 +19,9 @@ struct TokenRequestModel: Encodable {
     }
 }
 
-// MARK: - Response Model
+// MARK: - Response Data Model
 
-struct TokenResponseModel: Decodable {
+struct TokenResponseDataModel: Decodable {
     let accessToken: String
     let tokenType: String
     let expiresIn: Int

@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct MVIApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     @StateObject var navigator: Navigator = .init()
     
     var body: some Scene {
