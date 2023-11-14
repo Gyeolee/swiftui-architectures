@@ -24,4 +24,8 @@ struct AlbumsClient {
             parameters: requestDataModel.parameters
         )
     }
+    
+    func getAlbum(id: String) async throws -> AlbumDetailResponseDataModel {
+        return try await agent.run(API.Albums.album(id: id).url)
+    }
 }

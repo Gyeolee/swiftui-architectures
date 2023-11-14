@@ -11,7 +11,7 @@ import SwiftUI
 
 enum NavigationViewType: Hashable {
     case list
-    case detail
+    case detail(id: String)
     
     @ViewBuilder
     func build() -> some View {
@@ -19,8 +19,8 @@ enum NavigationViewType: Hashable {
         case .list:
             ListView.build()
             
-        case .detail:
-            DetailView()
+        case let .detail(id):
+            DetailView.build(detailId: id)
         }
     }
 }

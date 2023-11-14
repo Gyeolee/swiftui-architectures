@@ -18,8 +18,8 @@ struct ListView: View {
         ScrollView {
             LazyVStack(spacing: 16) {
                 ForEach(state.itemStates, id: \.self) {
-                    ListItemView(state: $0) { _ in
-                        navigator.push(to: .detail)
+                    ListItemView(state: $0) { id in
+                        navigator.push(to: .detail(id: id))
                     }
                     .padding(.horizontal)
                 }
