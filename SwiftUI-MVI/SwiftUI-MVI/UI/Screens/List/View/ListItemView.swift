@@ -36,6 +36,7 @@ struct ListItemView: View {
                 
                 Text(state.title)
                     .foregroundColor(.black)
+                    .font(.headline)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(

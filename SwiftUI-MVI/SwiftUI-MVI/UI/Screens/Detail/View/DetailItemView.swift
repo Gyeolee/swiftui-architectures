@@ -16,11 +16,14 @@ struct DetailItemView: View {
     @State var state: DetailItemState
     
     var body: some View {
-        HStack {
+        HStack(spacing: 12) {
             Text(state.number)
+                .font(.headline)
             
             Text(state.title)
+                .font(.headline)
         }
+        .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
             Color(.sRGB, red: 250/255, green: 250/255, blue: 254/255, opacity: 1)
