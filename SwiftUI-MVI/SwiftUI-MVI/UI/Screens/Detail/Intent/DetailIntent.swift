@@ -18,6 +18,7 @@ class DetailIntent: DetailIntentProtocol {
     func viewOnTask() async {
         do {
             let responseData = try await albumsClient.getAlbum(id: id)
+            actionsModel.update(responseData)
         } catch {
             print(error)
         }

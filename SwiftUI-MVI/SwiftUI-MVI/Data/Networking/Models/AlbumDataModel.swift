@@ -97,7 +97,7 @@ struct AlbumTracksResponseDataModel: Decodable {
 struct AlbumTrackItemResponseDataModel: Decodable {
     let id: String
     let name: String
-    let previewUrl: String
+    let previewUrl: String?
     
     enum CodingKeys: String, CodingKey {
         case id, name

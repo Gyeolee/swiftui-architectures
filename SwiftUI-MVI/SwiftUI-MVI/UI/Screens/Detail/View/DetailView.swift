@@ -15,21 +15,47 @@ struct DetailView: View {
     private var state: DetailModelStateProtocol { container.model }
     
     var body: some View {
-        Text("Detail View")
-            .navigationBarBackButtonHidden(true)
-            .toolbar {
-                ToolbarItem(placement: .navigation) {
-                    Button(action: navigator.pop) {
-                        HStack {
-                            Image(systemName: "chevron.backward")
-                            Text("Go Back")
-                        }
+        ScrollView {
+            VStack {
+                AsyncImage(url: URL(string: state.imageUrl)) { phase in
+                    if let image = phase.image {
+                        image
+                            .resizable()
+                            .frame(width: 300, height: 300)
+                    } else if let _ = phase.error {
+                        Color.red
+                    } else {
+                        ProgressView()
+                    }
+                }
+                .frame(width: 300, height: 300)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                
+                Text(state.albumName)
+                    .font(.largeTitle)
+                
+                Text(state.artistName)
+                    .font(.title)
+                
+                LazyVStack(spacing: 16) {
+                    ForEach(state.tracks, id: \.self) {
+                        DetailItemView(state: $0)
+                            .padding(.horizontal)
                     }
                 }
             }
-            .task {
-                await intent.viewOnTask()
+        }
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigation) {
+                Button(action: navigator.pop) {
+                    Image(systemName: "chevron.backward")
+                }
             }
+        }
+        .task {
+            await intent.viewOnTask()
+        }
     }
 }
 
