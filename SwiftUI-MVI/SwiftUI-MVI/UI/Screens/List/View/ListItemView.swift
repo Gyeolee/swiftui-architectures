@@ -19,16 +19,30 @@ struct ListItemView: View {
     
     var body: some View {
         Button(action: { action(state.id) }) {
-            ZStack {
-                Color(.sRGB, red: 250/255, green: 250/255, blue: 254/255, opacity: 1)
-                    .cornerRadius(14)
-                    .shadow(color: Color(.sRGB, white: 0, opacity: 0.15),
-                            radius: 4, x: 1, y: 1)
-
+            HStack {
+                AsyncImage(url: URL(string: state.imageUrl)) { phase in
+                    if let image = phase.image {
+                        image
+                            .resizable()
+                            .frame(width: 60, height: 60)
+                    } else if let _ = phase.error {
+                        Color.red
+                    } else {
+                        ProgressView()
+                    }
+                }
+                .frame(width: 60, height: 60)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                
                 Text(state.title)
                     .foregroundColor(.black)
-                    .padding()
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                Color(.sRGB, red: 250/255, green: 250/255, blue: 254/255, opacity: 1)
+                    .cornerRadius(12)
+                    .shadow(color: Color(.sRGB, white: 0, opacity: 0.15), radius: 4, x: 1, y: 1)
+            )
         }
     }
 }
