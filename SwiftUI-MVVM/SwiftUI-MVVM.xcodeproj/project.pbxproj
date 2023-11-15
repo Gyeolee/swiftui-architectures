@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		621860DE2B04937D00A75DE0 /* MVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621860DD2B04937D00A75DE0 /* MVVMApp.swift */; };
-		621860E02B04937D00A75DE0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621860DF2B04937D00A75DE0 /* ContentView.swift */; };
+		621860E02B04937D00A75DE0 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621860DF2B04937D00A75DE0 /* RootView.swift */; };
 		621860E22B04937D00A75DE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 621860E12B04937D00A75DE0 /* Assets.xcassets */; };
 		621860E52B04937D00A75DE0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 621860E42B04937D00A75DE0 /* Preview Assets.xcassets */; };
+		621860EE2B04945700A75DE0 /* NewReleasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621860ED2B04945700A75DE0 /* NewReleasesView.swift */; };
+		621860F32B04954800A75DE0 /* NewReleaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621860F22B04954800A75DE0 /* NewReleaseModel.swift */; };
+		621860F72B0495C100A75DE0 /* NewReleaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621860F62B0495C100A75DE0 /* NewReleaseView.swift */; };
+		621860FA2B04962B00A75DE0 /* NewReleasesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621860F92B04962B00A75DE0 /* NewReleasesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		621860DA2B04937D00A75DE0 /* SwiftUI-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		621860DD2B04937D00A75DE0 /* MVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMApp.swift; sourceTree = "<group>"; };
-		621860DF2B04937D00A75DE0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		621860DF2B04937D00A75DE0 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		621860E12B04937D00A75DE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		621860E42B04937D00A75DE0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		621860ED2B04945700A75DE0 /* NewReleasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesView.swift; sourceTree = "<group>"; };
+		621860F22B04954800A75DE0 /* NewReleaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleaseModel.swift; sourceTree = "<group>"; };
+		621860F62B0495C100A75DE0 /* NewReleaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleaseView.swift; sourceTree = "<group>"; };
+		621860F92B04962B00A75DE0 /* NewReleasesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +59,11 @@
 		621860DC2B04937D00A75DE0 /* SwiftUI-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				621860EF2B04952200A75DE0 /* Models */,
+				621860F02B04952600A75DE0 /* ViewModels */,
+				621860EB2B0493F100A75DE0 /* Views */,
 				621860DD2B04937D00A75DE0 /* MVVMApp.swift */,
-				621860DF2B04937D00A75DE0 /* ContentView.swift */,
+				621860DF2B04937D00A75DE0 /* RootView.swift */,
 				621860E12B04937D00A75DE0 /* Assets.xcassets */,
 				621860E32B04937D00A75DE0 /* Preview Content */,
 			);
@@ -65,6 +76,55 @@
 				621860E42B04937D00A75DE0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		621860EB2B0493F100A75DE0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				621860EC2B04944700A75DE0 /* NewReleases */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		621860EC2B04944700A75DE0 /* NewReleases */ = {
+			isa = PBXGroup;
+			children = (
+				621860ED2B04945700A75DE0 /* NewReleasesView.swift */,
+				621860F62B0495C100A75DE0 /* NewReleaseView.swift */,
+			);
+			path = NewReleases;
+			sourceTree = "<group>";
+		};
+		621860EF2B04952200A75DE0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				621860F12B04952E00A75DE0 /* NewReleases */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		621860F02B04952600A75DE0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				621860F82B04961F00A75DE0 /* NewReleases */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		621860F12B04952E00A75DE0 /* NewReleases */ = {
+			isa = PBXGroup;
+			children = (
+				621860F22B04954800A75DE0 /* NewReleaseModel.swift */,
+			);
+			path = NewReleases;
+			sourceTree = "<group>";
+		};
+		621860F82B04961F00A75DE0 /* NewReleases */ = {
+			isa = PBXGroup;
+			children = (
+				621860F92B04962B00A75DE0 /* NewReleasesViewModel.swift */,
+			);
+			path = NewReleases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +197,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				621860E02B04937D00A75DE0 /* ContentView.swift in Sources */,
+				621860F32B04954800A75DE0 /* NewReleaseModel.swift in Sources */,
+				621860E02B04937D00A75DE0 /* RootView.swift in Sources */,
 				621860DE2B04937D00A75DE0 /* MVVMApp.swift in Sources */,
+				621860FA2B04962B00A75DE0 /* NewReleasesViewModel.swift in Sources */,
+				621860EE2B04945700A75DE0 /* NewReleasesView.swift in Sources */,
+				621860F72B0495C100A75DE0 /* NewReleaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
