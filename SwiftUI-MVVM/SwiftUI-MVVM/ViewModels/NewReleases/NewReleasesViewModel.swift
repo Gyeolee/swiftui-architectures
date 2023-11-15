@@ -11,6 +11,11 @@ final class NewReleasesViewModel: ObservableObject {
     @Published var newReleaseModels: [NewReleaseModel] = []
     
     func fetchNewReleases() async {
-        
+        do {
+            let data: TokenResponseDataModel = try await APIClient.request(API.AccessToken.token)
+            print(data)
+        } catch {
+            print(error)
+        }
     }
 }
