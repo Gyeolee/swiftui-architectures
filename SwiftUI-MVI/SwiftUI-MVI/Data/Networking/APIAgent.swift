@@ -26,13 +26,12 @@ struct APIAgent {
         )
     }
     
-    func run<T: Decodable>(_ url: URL,
-                           method: HTTPMethod = .get,
-                           parameters: Parameters? = nil,
-                           encoding: ParameterEncoding = URLEncoding.default) async throws -> T {
+    func run<T: Decodable>(_ target: APITarget) async throws -> T {
+        let url = target.baseURL.appending(path: target.path)
+        
         do {
             return try await session
-                .request(url, method: method, parameters: parameters, encoding: encoding)
+                .request(url, method: target.method, parameters: target.parameters, encoding: target.encoding)
                 .validate { _, response, data -> Request.ValidationResult in
                     guard let _ = data, (200...299).contains(response.statusCode) else {
                         switch response.statusCode {

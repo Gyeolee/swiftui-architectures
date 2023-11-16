@@ -12,20 +12,11 @@ struct AlbumsClient {
     private let agent: APIAgent = .init()
     private let country: String = "KR"
     
-    func getNewReleases(offset: Int,
-                        limit: Int = API.requestItemsLimit) async throws -> AlbumNewReleasesResponseDataModel {
-        let requestDataModel = AlbumsRequestDataModel(
-            country: country,
-            limit: limit,
-            offset: offset
-        )
-        return try await agent.run(
-            API.Albums.newReleases.url,
-            parameters: requestDataModel.parameters
-        )
+    func getNewReleases(offset: Int) async throws -> AlbumNewReleasesResponseDataModel {
+        return try await agent.run(APIs.Albums.newReleases(offset: offset))
     }
     
     func getAlbum(id: String) async throws -> AlbumDetailResponseDataModel {
-        return try await agent.run(API.Albums.album(id: id).url)
+        return try await agent.run(APIs.Albums.album(id: id))
     }
 }

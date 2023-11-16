@@ -11,16 +11,6 @@ struct TokenClient {
     private let agent: APIAgent = .init(interceptor: nil)
     
     func postToken() async throws -> TokenResponseDataModel {
-        let requestDataModel = TokenRequestDataModel(
-            grantType: APIConfig.grantType,
-            clientId: APIConfig.clientId,
-            clientSecret: APIConfig.clientSecret
-        )
-        return try await agent.run(
-            API.AccessToken.token.url,
-            method: .post,
-            parameters: requestDataModel.parameters,
-            encoding: URLEncoding.httpBody
-        )
+        return try await agent.run(APIs.AccessToken.token)
     }
 }
