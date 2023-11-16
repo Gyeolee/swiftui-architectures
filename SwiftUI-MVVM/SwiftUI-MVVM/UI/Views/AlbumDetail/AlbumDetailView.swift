@@ -39,9 +39,9 @@ struct AlbumDetailView: View {
                     .font(.title)
                 
                 LazyVStack(spacing: 16) {
-                    ForEach(model.tracks, id: \.self) { _ in
-//                        DetailItemView(state: $0)
-//                            .padding(.horizontal)
+                    ForEach(model.tracks, id: \.self) {
+                        AlbumTrackItemView(model: $0)
+                            .padding(.horizontal)
                     }
                 }
             }

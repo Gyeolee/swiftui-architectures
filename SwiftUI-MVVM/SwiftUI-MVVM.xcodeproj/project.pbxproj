@@ -32,6 +32,7 @@
 		629D15C22B05B33700138089 /* AlbumDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D15C12B05B33700138089 /* AlbumDetailModel.swift */; };
 		629D15C72B05B3B900138089 /* AlbumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D15C62B05B3B900138089 /* AlbumDetailView.swift */; };
 		629D15CA2B05B3F600138089 /* AlbumDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D15C92B05B3F600138089 /* AlbumDetailViewModel.swift */; };
+		629D15CC2B05D3AF00138089 /* AlbumTrackItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D15CB2B05D3AF00138089 /* AlbumTrackItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		629D15C12B05B33700138089 /* AlbumDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailModel.swift; sourceTree = "<group>"; };
 		629D15C62B05B3B900138089 /* AlbumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailView.swift; sourceTree = "<group>"; };
 		629D15C92B05B3F600138089 /* AlbumDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewModel.swift; sourceTree = "<group>"; };
+		629D15CB2B05D3AF00138089 /* AlbumTrackItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTrackItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				629D15C62B05B3B900138089 /* AlbumDetailView.swift */,
+				629D15CB2B05D3AF00138089 /* AlbumTrackItemView.swift */,
 			);
 			path = AlbumDetail;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				621861112B04AA0D00A75DE0 /* APILoggingPlugin.swift in Sources */,
 				629D15C22B05B33700138089 /* AlbumDetailModel.swift in Sources */,
 				629D15B92B05A2B700138089 /* LocalStorage.swift in Sources */,
+				629D15CC2B05D3AF00138089 /* AlbumTrackItemView.swift in Sources */,
 				621861132B04ABD200A75DE0 /* Data+Extension.swift in Sources */,
 				621860E02B04937D00A75DE0 /* RootView.swift in Sources */,
 				6218610A2B049B4300A75DE0 /* TokenDataModel.swift in Sources */,
