@@ -8,15 +8,14 @@
 import SwiftUI
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-//    private let localStorage: LocalStorage = .init()
+    private let localStorage: LocalStorage = .init()
     
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         Task {
             do {
                 let data: TokenResponseDataModel = try await APIClient.request(API.AccessToken.token)
-//                localStorage.accessToken(responseData.accessToken)
-                print(data)
+                localStorage.accessToken(data.accessToken)
             } catch {
                 print(error)
             }
