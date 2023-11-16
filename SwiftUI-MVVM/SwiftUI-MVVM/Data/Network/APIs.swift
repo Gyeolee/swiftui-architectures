@@ -15,7 +15,7 @@ enum API {
     
     enum Albums {
         case album(id: String)
-        case newReleases
+        case newReleases(offset: Int)
     }
 }
 
@@ -54,5 +54,49 @@ extension API.AccessToken: TargetType {
         switch self {
         case .token:    return nil
         }
+    }
+}
+
+extension API.Albums: TargetType {
+    var country: String { "KR" }
+    var limit: Int { 20 }
+    
+    var baseURL: URL { URL(string: "https://api.spotify.com/v1")! }
+    
+    var path: String {
+        switch self {
+        case let .album(id):    return "/albums/\(id)"
+        case .newReleases:      return "/browse/new-releases"
+        }
+    }
+    
+    var method: Moya.Method {
+        switch self {
+        case .album:        fallthrough
+        case .newReleases:  return .get
+        }
+    }
+    
+    var task: Moya.Task {
+        switch self {
+        case .album:
+            return .requestPlain
+            
+        case let .newReleases(offset):
+            let requestParameters = AlbumsRequestDataModel(
+                country: country,
+                limit: limit,
+                offset: offset
+            ).parameters ?? [:]
+            return .requestParameters(parameters: requestParameters, encoding: URLEncoding.default)
+        }
+    }
+    
+    var headers: [String : String]? {
+        let localStorage: LocalStorage = .init()
+        if let accessToken = localStorage.accessToken() {
+            return ["Authorization": "Bearer \(accessToken)"]
+        }
+        return nil
     }
 }
