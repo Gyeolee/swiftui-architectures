@@ -15,7 +15,7 @@ enum NavigationViewType: Hashable {
     @ViewBuilder
     var view: some View {
         switch self {
-        case .albumDetail:  EmptyView()
+        case let .albumDetail(id):  AlbumDetailView(id: id)
         }
     }
 }
