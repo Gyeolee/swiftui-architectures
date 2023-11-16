@@ -11,9 +11,12 @@ import SwiftUI
 struct MVVMApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
+    @StateObject var navigator: Navigator = .init()
+    
     var body: some Scene {
         WindowGroup {
             RootView()
+                .environmentObject(navigator)
         }
     }
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NewReleasesView: View {
+    @EnvironmentObject var navigator: Navigator
     @StateObject var viewModel: NewReleasesViewModel = .init()
     
     var body: some View {
@@ -15,7 +16,7 @@ struct NewReleasesView: View {
             LazyVStack(spacing: 16) {
                 ForEach(viewModel.newReleaseModels, id: \.self) {
                     NewReleaseView(model: $0) { id in
-                        // TODO: Navigate
+                        navigator.push(to: .albumDetail(id: id))
                     }
                     .padding(.horizontal)
                 }

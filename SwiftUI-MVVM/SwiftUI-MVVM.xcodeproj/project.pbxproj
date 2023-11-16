@@ -28,6 +28,7 @@
 		621861152B04AE9D00A75DE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621861142B04AE9D00A75DE0 /* AppDelegate.swift */; };
 		629D15B92B05A2B700138089 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D15B82B05A2B700138089 /* LocalStorage.swift */; };
 		629D15BB2B05A64800138089 /* AlbumDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D15BA2B05A64800138089 /* AlbumDataModel.swift */; };
+		629D15BF2B05B03500138089 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D15BE2B05B03500138089 /* Navigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		621861142B04AE9D00A75DE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		629D15B82B05A2B700138089 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		629D15BA2B05A64800138089 /* AlbumDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDataModel.swift; sourceTree = "<group>"; };
+		629D15BE2B05B03500138089 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,12 +89,9 @@
 			children = (
 				6218610B2B049B5700A75DE0 /* Extensions */,
 				629D15B62B05A2A200138089 /* Data */,
-				621860EF2B04952200A75DE0 /* Models */,
-				621860F02B04952600A75DE0 /* ViewModels */,
-				621860EB2B0493F100A75DE0 /* Views */,
+				629D15BC2B05AFE400138089 /* UI */,
 				621861142B04AE9D00A75DE0 /* AppDelegate.swift */,
 				621860DD2B04937D00A75DE0 /* MVVMApp.swift */,
-				621860DF2B04937D00A75DE0 /* RootView.swift */,
 				621860E12B04937D00A75DE0 /* Assets.xcassets */,
 				621860E32B04937D00A75DE0 /* Preview Content */,
 			);
@@ -202,6 +201,26 @@
 			path = LocalStorage;
 			sourceTree = "<group>";
 		};
+		629D15BC2B05AFE400138089 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				621860DF2B04937D00A75DE0 /* RootView.swift */,
+				621860EF2B04952200A75DE0 /* Models */,
+				621860F02B04952600A75DE0 /* ViewModels */,
+				621860EB2B0493F100A75DE0 /* Views */,
+				629D15BD2B05B02400138089 /* Navigation */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		629D15BD2B05B02400138089 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				629D15BE2B05B03500138089 /* Navigation.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -292,6 +311,7 @@
 				6218610A2B049B4300A75DE0 /* TokenDataModel.swift in Sources */,
 				621861152B04AE9D00A75DE0 /* AppDelegate.swift in Sources */,
 				621860DE2B04937D00A75DE0 /* MVVMApp.swift in Sources */,
+				629D15BF2B05B03500138089 /* Navigation.swift in Sources */,
 				621860FA2B04962B00A75DE0 /* NewReleasesViewModel.swift in Sources */,
 				621860EE2B04945700A75DE0 /* NewReleasesView.swift in Sources */,
 				621860F72B0495C100A75DE0 /* NewReleaseView.swift in Sources */,
