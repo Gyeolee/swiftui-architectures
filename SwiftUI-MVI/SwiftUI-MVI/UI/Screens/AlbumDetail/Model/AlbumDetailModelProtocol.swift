@@ -6,10 +6,8 @@
 //
 
 protocol AlbumDetailModelStateProtocol {
-    var imageUrl: String { get }
-    var albumName: String { get }
-    var artistName: String { get }
-    var tracks: [AlbumTrackItemView.DetailItemState] { get }
+    var detailState: AlbumDetailView.AlbumDetailState { get }
+    var trackStates: [AlbumTrackItemView.AlbumTrackItemState] { get }
 }
 
 protocol AlbumDetailModelActionsProtocol {

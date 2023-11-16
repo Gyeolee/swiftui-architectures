@@ -8,12 +8,7 @@
 import SwiftUI
 
 struct AlbumTrackItemView: View {
-    struct DetailItemState: Hashable {
-        let number: String
-        let title: String
-    }
-    
-    @State var state: DetailItemState
+    @State var state: AlbumTrackItemState
     
     var body: some View {
         HStack(spacing: 12) {
@@ -33,6 +28,13 @@ struct AlbumTrackItemView: View {
     }
 }
 
+extension AlbumTrackItemView {
+    struct AlbumTrackItemState: Hashable {
+        let number: String
+        let title: String
+    }
+}
+
 #Preview {
-    AlbumTrackItemView(state: AlbumTrackItemView.DetailItemState(number: "1", title: "title"))
+    AlbumTrackItemView(state: AlbumTrackItemView.AlbumTrackItemState(number: "1", title: "title"))
 }

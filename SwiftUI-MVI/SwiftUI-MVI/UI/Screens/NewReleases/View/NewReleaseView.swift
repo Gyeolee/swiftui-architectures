@@ -8,13 +8,7 @@
 import SwiftUI
 
 struct NewReleaseView: View {
-    struct ListItemState: Hashable {
-        let id: String
-        let title: String
-        let imageUrl: String
-    }
-    
-    @State var state: ListItemState
+    @State var state: NewReleaseItemState
     var action: (_ id: String) -> Void
     
     var body: some View {
@@ -48,9 +42,17 @@ struct NewReleaseView: View {
     }
 }
 
+extension NewReleaseView {
+    struct NewReleaseItemState: Hashable {
+        let id: String
+        let title: String
+        let imageUrl: String
+    }
+}
+
 #Preview {
     NewReleaseView(
-        state: NewReleaseView.ListItemState(id: "id", title: "title", imageUrl: "imageUrl"),
+        state: NewReleaseView.NewReleaseItemState(id: "id", title: "title", imageUrl: "imageUrl"),
         action: { _ in }
     )
 }

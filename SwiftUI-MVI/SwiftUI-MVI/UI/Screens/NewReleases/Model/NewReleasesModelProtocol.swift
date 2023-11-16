@@ -6,7 +6,7 @@
 //
 
 protocol NewReleasesModelStateProtocol {
-    var itemStates: [NewReleaseView.ListItemState] { get }
+    var itemStates: [NewReleaseView.NewReleaseItemState] { get }
 }
 
 protocol NewReleasesModelActionsProtocol {
