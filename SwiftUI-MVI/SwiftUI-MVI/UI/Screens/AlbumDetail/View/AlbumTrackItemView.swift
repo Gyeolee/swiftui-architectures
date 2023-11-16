@@ -1,5 +1,5 @@
 //
-//  DetailItemView.swift
+//  AlbumTrackItemView.swift
 //  SwiftUI-MVI
 //
 //  Created by Hangyeol on 11/14/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DetailItemView: View {
+struct AlbumTrackItemView: View {
     struct DetailItemState: Hashable {
         let number: String
         let title: String
@@ -34,5 +34,5 @@ struct DetailItemView: View {
 }
 
 #Preview {
-    DetailItemView(state: DetailItemView.DetailItemState(number: "1", title: "title"))
+    AlbumTrackItemView(state: AlbumTrackItemView.DetailItemState(number: "1", title: "title"))
 }

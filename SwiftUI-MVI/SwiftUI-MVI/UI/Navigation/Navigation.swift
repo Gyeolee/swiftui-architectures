@@ -10,17 +10,13 @@ import SwiftUI
 // MARK: - Navigation View Type
 
 enum NavigationViewType: Hashable {
-    case list
     case detail(id: String)
     
     @ViewBuilder
     func build() -> some View {
         switch self {
-        case .list:
-            ListView.build()
-            
         case let .detail(id):
-            DetailView.build(detailId: id)
+            AlbumDetailView.build(detailId: id)
         }
     }
 }

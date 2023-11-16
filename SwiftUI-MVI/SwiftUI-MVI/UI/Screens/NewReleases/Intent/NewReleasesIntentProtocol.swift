@@ -1,10 +1,10 @@
 //
-//  ListIntentProtocol.swift
+//  NewReleasesIntentProtocol.swift
 //  SwiftUI-MVI
 //
 //  Created by Hangyeol on 11/13/23.
 //
 
-protocol ListIntentProtocol {
+protocol NewReleasesIntentProtocol {
     func viewOnTask() async
 }

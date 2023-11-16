@@ -1,5 +1,5 @@
 //
-//  DetailView.swift
+//  AlbumDetailView.swift
 //  SwiftUI-MVI
 //
 //  Created by Hangyeol on 11/13/23.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct DetailView: View {
+struct AlbumDetailView: View {
     @EnvironmentObject var navigator: Navigator
-    @StateObject var container: MVIContainer<DetailIntentProtocol, DetailModelStateProtocol>
+    @StateObject var container: MVIContainer<AlbumDetailIntentProtocol, AlbumDetailModelStateProtocol>
     
-    private var intent: DetailIntentProtocol { container.intent }
-    private var state: DetailModelStateProtocol { container.model }
+    private var intent: AlbumDetailIntentProtocol { container.intent }
+    private var state: AlbumDetailModelStateProtocol { container.model }
     
     var body: some View {
         ScrollView {
@@ -39,7 +39,7 @@ struct DetailView: View {
                 
                 LazyVStack(spacing: 16) {
                     ForEach(state.tracks, id: \.self) {
-                        DetailItemView(state: $0)
+                        AlbumTrackItemView(state: $0)
                             .padding(.horizontal)
                     }
                 }
@@ -59,26 +59,26 @@ struct DetailView: View {
     }
 }
 
-extension DetailView {
+extension AlbumDetailView {
     static func build(detailId: String) -> some View {
-        let model = DetailModel()
-        let intent = DetailIntent(model: model, detailId: detailId)
+        let model = AlbumDetailModel()
+        let intent = AlbumDetailIntent(model: model, detailId: detailId)
         let container = MVIContainer(
-            intent: intent as DetailIntentProtocol,
-            model: model as DetailModelStateProtocol,
+            intent: intent as AlbumDetailIntentProtocol,
+            model: model as AlbumDetailModelStateProtocol,
             modelChangePublisher: model.objectWillChange
         )
-        return DetailView(container: container)
+        return AlbumDetailView(container: container)
     }
 }
 
 #Preview {
-    let model = DetailModel()
-    let intent = DetailIntent(model: model, detailId: "detailId")
+    let model = AlbumDetailModel()
+    let intent = AlbumDetailIntent(model: model, detailId: "detailId")
     let container = MVIContainer(
-        intent: intent as DetailIntentProtocol,
-        model: model as DetailModelStateProtocol,
+        intent: intent as AlbumDetailIntentProtocol,
+        model: model as AlbumDetailModelStateProtocol,
         modelChangePublisher: model.objectWillChange
     )
-    return DetailView(container: container)
+    return AlbumDetailView(container: container)
 }

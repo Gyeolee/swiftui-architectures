@@ -1,16 +1,16 @@
 //
-//  DetailIntent.swift
+//  AlbumDetailIntent.swift
 //  SwiftUI-MVI
 //
 //  Created by Hangyeol on 11/14/23.
 //
 
-class DetailIntent: DetailIntentProtocol {
-    private let actionsModel: DetailModelActionsProtocol
+class AlbumDetailIntent: AlbumDetailIntentProtocol {
+    private let actionsModel: AlbumDetailModelActionsProtocol
     private let albumsClient: AlbumsClient = .init()
     private let id: String
     
-    init(model: DetailModelActionsProtocol, detailId: String) {
+    init(model: AlbumDetailModelActionsProtocol, detailId: String) {
         actionsModel = model
         id = detailId
     }

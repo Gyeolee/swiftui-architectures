@@ -12,7 +12,7 @@ struct RootView: View {
     
     var body: some View {
         NavigationStack(path: navigator.path) {
-            ListView.build()
+            NewReleasesView.build()
                 .navigationDestination(for: NavigationViewType.self) {
                     $0.build()
                 }

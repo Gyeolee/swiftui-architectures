@@ -1,16 +1,16 @@
 //
-//  ListIntent.swift
+//  NewReleasesIntent.swift
 //  SwiftUI-MVI
 //
 //  Created by Hangyeol on 11/13/23.
 //
 
-class ListIntent: ListIntentProtocol {
-    private let actionsModel: ListModelActionsProtocol
+class NewReleasesIntent: NewReleasesIntentProtocol {
+    private let actionsModel: NewReleasesModelActionsProtocol
     private let albumsClient: AlbumsClient = .init()
     private var offset: Int = 0
     
-    init(model: ListModelActionsProtocol) {
+    init(model: NewReleasesModelActionsProtocol) {
         actionsModel = model
     }
     

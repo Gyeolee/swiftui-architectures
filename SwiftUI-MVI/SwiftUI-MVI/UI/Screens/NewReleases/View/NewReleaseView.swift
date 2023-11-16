@@ -1,5 +1,5 @@
 //
-//  ListItemView.swift
+//  NewReleaseView.swift
 //  SwiftUI-MVI
 //
 //  Created by Hangyeol on 11/13/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ListItemView: View {
+struct NewReleaseView: View {
     struct ListItemState: Hashable {
         let id: String
         let title: String
@@ -49,8 +49,8 @@ struct ListItemView: View {
 }
 
 #Preview {
-    ListItemView(
-        state: ListItemView.ListItemState(id: "id", title: "title", imageUrl: "imageUrl"),
+    NewReleaseView(
+        state: NewReleaseView.ListItemState(id: "id", title: "title", imageUrl: "imageUrl"),
         action: { _ in }
     )
 }
