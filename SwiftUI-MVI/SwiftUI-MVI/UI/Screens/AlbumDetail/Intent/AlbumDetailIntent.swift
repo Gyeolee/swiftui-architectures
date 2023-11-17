@@ -5,6 +5,8 @@
 //  Created by Hangyeol on 11/14/23.
 //
 
+import Foundation
+
 class AlbumDetailIntent: AlbumDetailIntentProtocol {
     private let actionsModel: AlbumDetailModelActionsProtocol
     private let albumsClient: AlbumsClient = .init()
@@ -18,7 +20,7 @@ class AlbumDetailIntent: AlbumDetailIntentProtocol {
     func viewOnTask() async {
         do {
             let responseData = try await albumsClient.getAlbum(id: id)
-            actionsModel.update(responseData)
+            await actionsModel.update(responseData)
         } catch {
             print(error)
         }

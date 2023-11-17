@@ -8,18 +8,13 @@
 import SwiftUI
 
 final class NewReleasesModel: ObservableObject, NewReleasesModelStateProtocol {
-    @Published var newReleaseAlbumStates: [NewReleaseAlbumState] = []
+    @Published var newReleaseStates: [NewReleaseState] = []
 }
 
 extension NewReleasesModel: NewReleasesModelActionsProtocol {
     func update(_ data: [AlbumItemResponseDataModel]) {
-        newReleaseAlbumStates.append(contentsOf: data.map {
-            let image = $0.images.first { $0.width == 640 }!
-            return NewReleaseAlbumState(
-                id: $0.id,
-                title: $0.name,
-                imageUrl: image.url
-            )
+        newReleaseStates.append(contentsOf: data.map {
+            NewReleaseState(id: $0.id, title: $0.name, imageUrl: $0.images.first { $0.width == 640 }!.url)
         })
     }
 }

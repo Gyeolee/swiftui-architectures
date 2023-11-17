@@ -9,7 +9,7 @@ import SwiftUI
 
 // MARK: - State
 
-struct NewReleaseAlbumState: Hashable {
+struct NewReleaseState: Hashable {
     let id: String
     let title: String
     let imageUrl: String
@@ -18,7 +18,7 @@ struct NewReleaseAlbumState: Hashable {
 // MARK: - View
 
 struct NewReleaseView: View {
-    @State var state: NewReleaseAlbumState
+    @State var state: NewReleaseState
     var action: (_ id: String) -> Void
     
     var body: some View {
@@ -54,7 +54,7 @@ struct NewReleaseView: View {
 
 #Preview {
     NewReleaseView(
-        state: NewReleaseAlbumState(id: "id", title: "title", imageUrl: "imageUrl"),
+        state: NewReleaseState(id: "id", title: "title", imageUrl: "imageUrl"),
         action: { _ in }
     )
 }

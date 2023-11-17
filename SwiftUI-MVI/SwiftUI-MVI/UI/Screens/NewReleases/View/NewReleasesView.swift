@@ -17,7 +17,7 @@ struct NewReleasesView: View {
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 16) {
-                ForEach(state.newReleaseAlbumStates, id: \.self) {
+                ForEach(state.newReleaseStates, id: \.self) {
                     NewReleaseView(state: $0) { id in
                         navigator.push(to: .detail(id: id))
                     }

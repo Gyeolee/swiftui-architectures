@@ -6,9 +6,10 @@
 //
 
 protocol NewReleasesModelStateProtocol {
-    var newReleaseAlbumStates: [NewReleaseAlbumState] { get }
+    var newReleaseStates: [NewReleaseState] { get }
 }
 
+@MainActor
 protocol NewReleasesModelActionsProtocol {
     func update(_ data: [AlbumItemResponseDataModel])
 }

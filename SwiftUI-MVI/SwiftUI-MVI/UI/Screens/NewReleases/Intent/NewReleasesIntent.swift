@@ -5,6 +5,8 @@
 //  Created by Hangyeol on 11/13/23.
 //
 
+import Foundation
+
 class NewReleasesIntent: NewReleasesIntentProtocol {
     private let actionsModel: NewReleasesModelActionsProtocol
     private let albumsClient: AlbumsClient = .init()
@@ -18,7 +20,7 @@ class NewReleasesIntent: NewReleasesIntentProtocol {
         do {
             let responseData = try await albumsClient.getNewReleases(offset: offset)
             let albumsData = responseData.albums
-            actionsModel.update(albumsData.items)
+            await actionsModel.update(albumsData.items)
             
             offset += albumsData.limit
         } catch {

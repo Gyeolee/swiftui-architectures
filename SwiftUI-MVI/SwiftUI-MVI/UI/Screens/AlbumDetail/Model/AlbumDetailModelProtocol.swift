@@ -10,6 +10,7 @@ protocol AlbumDetailModelStateProtocol {
     var trackStates: [AlbumDetailTrackState] { get }
 }
 
+@MainActor
 protocol AlbumDetailModelActionsProtocol {
     func update(_ data: AlbumDetailResponseDataModel)
 }
