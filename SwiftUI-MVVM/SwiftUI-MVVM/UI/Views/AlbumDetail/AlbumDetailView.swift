@@ -11,7 +11,7 @@ struct AlbumDetailView: View {
     @EnvironmentObject var navigator: Navigator
     @StateObject var viewModel: AlbumDetailViewModel = .init()
     
-    private var model: AlbumDetailModel { viewModel.model }
+    private var model: AlbumDetailModel { viewModel.detailModel }
     
     var id: String
     
@@ -39,7 +39,7 @@ struct AlbumDetailView: View {
                     .font(.title)
                 
                 LazyVStack(spacing: 16) {
-                    ForEach(model.tracks, id: \.self) {
+                    ForEach(viewModel.trackModels, id: \.self) {
                         AlbumTrackItemView(model: $0)
                             .padding(.horizontal)
                     }

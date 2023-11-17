@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AlbumTrackItemView: View {
-    @State var model: AlbumTrackModel
+    @State var model: AlbumDetailTrackModel
     
     var body: some View {
         HStack(spacing: 12) {
@@ -29,5 +29,5 @@ struct AlbumTrackItemView: View {
 }
 
 #Preview {
-    AlbumTrackItemView(model: AlbumTrackModel.init(number: "1", title: "title"))
+    AlbumTrackItemView(model: AlbumDetailTrackModel.init(number: "1", title: "title"))
 }

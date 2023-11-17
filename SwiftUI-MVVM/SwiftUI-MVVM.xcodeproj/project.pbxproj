@@ -117,8 +117,8 @@
 		621860EB2B0493F100A75DE0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				629D15C32B05B3A400138089 /* AlbumDetail */,
 				621860EC2B04944700A75DE0 /* NewReleases */,
+				629D15C32B05B3A400138089 /* AlbumDetail */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -135,8 +135,8 @@
 		621860EF2B04952200A75DE0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				629D15C02B05B32E00138089 /* AlbumDetail */,
 				621860F12B04952E00A75DE0 /* NewReleases */,
+				629D15C02B05B32E00138089 /* AlbumDetail */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -144,8 +144,8 @@
 		621860F02B04952600A75DE0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				629D15C82B05B3ED00138089 /* AlbumDetail */,
 				621860F82B04961F00A75DE0 /* NewReleases */,
+				629D15C82B05B3ED00138089 /* AlbumDetail */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";

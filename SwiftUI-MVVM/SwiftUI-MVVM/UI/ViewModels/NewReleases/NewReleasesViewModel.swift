@@ -18,12 +18,7 @@ final class NewReleasesViewModel: ObservableObject {
             let albumsData = data.albums.items
             await MainActor.run {
                 newReleaseModels.append(contentsOf: albumsData.map {
-                    let image = $0.images.first { $0.width == 640 }!
-                    return NewReleaseModel(
-                        id: $0.id,
-                        albumTitle: $0.name,
-                        albumImageUrl: image.url
-                    )
+                    NewReleaseModel(id: $0.id, albumTitle: $0.name, albumImageUrl: $0.images.first { $0.width == 640 }!.url)
                 })
             }
         } catch {

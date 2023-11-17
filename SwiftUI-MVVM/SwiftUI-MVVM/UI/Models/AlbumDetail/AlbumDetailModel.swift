@@ -9,10 +9,9 @@ struct AlbumDetailModel: Hashable {
     var title: String
     var imageUrl: String
     var artistName: String
-    var tracks: [AlbumTrackModel]
 }
 
-struct AlbumTrackModel: Hashable {
+struct AlbumDetailTrackModel: Hashable {
     let number: String
     let title: String
 }
