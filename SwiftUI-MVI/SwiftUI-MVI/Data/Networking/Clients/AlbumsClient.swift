@@ -10,7 +10,6 @@ import Alamofire
 
 struct AlbumsClient {
     private let agent: APIAgent = .init()
-    private let country: String = "KR"
     
     func getNewReleases(offset: Int) async throws -> AlbumNewReleasesResponseDataModel {
         return try await agent.run(APIs.Albums.newReleases(offset: offset))

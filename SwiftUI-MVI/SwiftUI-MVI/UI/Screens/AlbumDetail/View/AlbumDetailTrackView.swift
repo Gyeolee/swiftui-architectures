@@ -1,5 +1,5 @@
 //
-//  AlbumTrackItemView.swift
+//  AlbumDetailTrackView.swift
 //  SwiftUI-MVI
 //
 //  Created by Hangyeol on 11/14/23.
@@ -7,8 +7,17 @@
 
 import SwiftUI
 
-struct AlbumTrackItemView: View {
-    @State var state: AlbumTrackItemState
+// MARK: - State
+
+struct AlbumDetailTrackState: Hashable {
+    let number: String
+    let title: String
+}
+
+// MARK: - View
+
+struct AlbumDetailTrackView: View {
+    @State var state: AlbumDetailTrackState
     
     var body: some View {
         HStack(spacing: 12) {
@@ -28,13 +37,6 @@ struct AlbumTrackItemView: View {
     }
 }
 
-extension AlbumTrackItemView {
-    struct AlbumTrackItemState: Hashable {
-        let number: String
-        let title: String
-    }
-}
-
 #Preview {
-    AlbumTrackItemView(state: AlbumTrackItemView.AlbumTrackItemState(number: "1", title: "title"))
+    AlbumDetailTrackView(state: AlbumDetailTrackState(number: "1", title: "title"))
 }

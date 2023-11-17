@@ -7,17 +7,28 @@
 
 import SwiftUI
 
+// MARK: - State
+
+struct AlbumDetailState {
+    let title: String
+    let imageUrl: String
+    let artistName: String
+}
+
+// MARK: - View
+
 struct AlbumDetailView: View {
     @EnvironmentObject var navigator: Navigator
     @StateObject var container: MVIContainer<AlbumDetailIntentProtocol, AlbumDetailModelStateProtocol>
     
     private var intent: AlbumDetailIntentProtocol { container.intent }
     private var state: AlbumDetailModelStateProtocol { container.model }
+    private var detailState: AlbumDetailState { state.detailState }
     
     var body: some View {
         ScrollView {
             VStack {
-                AsyncImage(url: URL(string: state.detailState.imageUrl)) { phase in
+                AsyncImage(url: URL(string: detailState.imageUrl)) { phase in
                     if let image = phase.image {
                         image
                             .resizable()
@@ -31,15 +42,15 @@ struct AlbumDetailView: View {
                 .frame(width: 300, height: 300)
                 .clipShape(RoundedRectangle(cornerRadius: 12))
                 
-                Text(state.detailState.title)
+                Text(detailState.title)
                     .font(.largeTitle)
                 
-                Text(state.detailState.artistName)
+                Text(detailState.artistName)
                     .font(.title)
                 
                 LazyVStack(spacing: 16) {
                     ForEach(state.trackStates, id: \.self) {
-                        AlbumTrackItemView(state: $0)
+                        AlbumDetailTrackView(state: $0)
                             .padding(.horizontal)
                     }
                 }
@@ -56,14 +67,6 @@ struct AlbumDetailView: View {
         .task {
             await intent.viewOnTask()
         }
-    }
-}
-
-extension AlbumDetailView {
-    struct AlbumDetailState {
-        let title: String
-        let imageUrl: String
-        let artistName: String
     }
 }
 

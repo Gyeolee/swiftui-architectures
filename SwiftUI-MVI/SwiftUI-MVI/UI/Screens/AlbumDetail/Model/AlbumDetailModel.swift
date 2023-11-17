@@ -8,19 +8,20 @@
 import SwiftUI
 
 final class AlbumDetailModel: ObservableObject, AlbumDetailModelStateProtocol {
-    @Published var detailState: AlbumDetailView.AlbumDetailState = .init(title: "", imageUrl: "", artistName: "")
-    @Published var trackStates: [AlbumTrackItemView.AlbumTrackItemState] = []
+    @Published var detailState: AlbumDetailState = .init(title: "", imageUrl: "", artistName: "")
+    @Published var trackStates: [AlbumDetailTrackState] = []
 }
 
 extension AlbumDetailModel: AlbumDetailModelActionsProtocol {
     func update(_ data: AlbumDetailResponseDataModel) {
-        detailState = .init(
+        detailState = AlbumDetailState(
             title: data.name,
             imageUrl: data.images.first { $0.width == 640 }?.url ?? "",
             artistName: data.artists.map { $0.name }.joined(separator: ", ")
         )
+        
         trackStates = data.tracks.items
             .enumerated()
-            .map { AlbumTrackItemView.AlbumTrackItemState(number: "\($0.offset + 1)", title: $0.element.name) }
+            .map { AlbumDetailTrackState(number: "\($0.offset + 1)", title: $0.element.name) }
     }
 }

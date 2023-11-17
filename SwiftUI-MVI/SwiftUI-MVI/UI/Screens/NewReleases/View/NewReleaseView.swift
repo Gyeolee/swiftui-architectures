@@ -7,8 +7,18 @@
 
 import SwiftUI
 
+// MARK: - State
+
+struct NewReleaseAlbumState: Hashable {
+    let id: String
+    let title: String
+    let imageUrl: String
+}
+
+// MARK: - View
+
 struct NewReleaseView: View {
-    @State var state: NewReleaseItemState
+    @State var state: NewReleaseAlbumState
     var action: (_ id: String) -> Void
     
     var body: some View {
@@ -42,17 +52,9 @@ struct NewReleaseView: View {
     }
 }
 
-extension NewReleaseView {
-    struct NewReleaseItemState: Hashable {
-        let id: String
-        let title: String
-        let imageUrl: String
-    }
-}
-
 #Preview {
     NewReleaseView(
-        state: NewReleaseView.NewReleaseItemState(id: "id", title: "title", imageUrl: "imageUrl"),
+        state: NewReleaseAlbumState(id: "id", title: "title", imageUrl: "imageUrl"),
         action: { _ in }
     )
 }

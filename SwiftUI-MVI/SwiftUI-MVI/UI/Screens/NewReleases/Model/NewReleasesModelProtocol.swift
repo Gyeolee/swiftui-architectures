@@ -6,7 +6,7 @@
 //
 
 protocol NewReleasesModelStateProtocol {
-    var itemStates: [NewReleaseView.NewReleaseItemState] { get }
+    var newReleaseAlbumStates: [NewReleaseAlbumState] { get }
 }
 
 protocol NewReleasesModelActionsProtocol {
