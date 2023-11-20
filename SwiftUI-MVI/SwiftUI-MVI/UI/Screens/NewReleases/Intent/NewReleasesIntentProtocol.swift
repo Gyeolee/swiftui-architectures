@@ -7,4 +7,5 @@
 
 protocol NewReleasesIntentProtocol {
     func viewOnTask() async
+    func lastItemViewOnTask() async
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Extensions
 import ViewModifiers
 
 struct NewReleasesView: View {
@@ -15,11 +16,16 @@ struct NewReleasesView: View {
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 16) {
-                ForEach(viewModel.newReleaseModels, id: \.self) {
-                    NewReleaseView(model: $0) { id in
+                ForEach(viewModel.newReleaseModels.withIndices, id: \.0) { index, model in
+                    NewReleaseView(model: model) { id in
                         navigator.push(to: .albumDetail(id: id))
                     }
                     .padding(.horizontal)
+                    .task {
+                        if index == viewModel.newReleaseModels.count - 1 {
+                            await viewModel.fetchNewReleases()
+                        }
+                    }
                 }
             }
             .padding(.vertical)

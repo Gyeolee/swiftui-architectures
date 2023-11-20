@@ -17,6 +17,16 @@ class NewReleasesIntent: NewReleasesIntentProtocol {
     }
     
     func viewOnTask() async {
+        await fetchNewReleases()
+    }
+    
+    func lastItemViewOnTask() async {
+        await fetchNewReleases()
+    }
+}
+
+extension NewReleasesIntent {
+    private func fetchNewReleases() async {
         do {
             let responseData = try await albumsClient.getNewReleases(offset: offset)
             let albumsData = responseData.albums
