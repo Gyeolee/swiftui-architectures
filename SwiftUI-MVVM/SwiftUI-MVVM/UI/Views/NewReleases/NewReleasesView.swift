@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ViewModifiers
 
 struct NewReleasesView: View {
     @EnvironmentObject var navigator: Navigator
@@ -23,7 +24,7 @@ struct NewReleasesView: View {
             }
             .padding(.vertical)
         }
-        .task {
+        .onlyOnceTask {
             await viewModel.fetchNewReleases()
         }
     }

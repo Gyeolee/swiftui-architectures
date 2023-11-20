@@ -38,6 +38,7 @@
 		629573DA2B01E73E0005B0A9 /* NewReleasesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573D92B01E73E0005B0A9 /* NewReleasesModel.swift */; };
 		629573DE2B01E89F0005B0A9 /* NewReleaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573DD2B01E89F0005B0A9 /* NewReleaseView.swift */; };
 		62ADA7822B0B1AE500440407 /* libExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62ADA7812B0B1AE500440407 /* libExtensions.a */; };
+		62ADA79C2B0B1CCA00440407 /* libViewModifiers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62ADA79B2B0B1CCA00440407 /* libViewModifiers.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		629573D92B01E73E0005B0A9 /* NewReleasesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesModel.swift; sourceTree = "<group>"; };
 		629573DD2B01E89F0005B0A9 /* NewReleaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleaseView.swift; sourceTree = "<group>"; };
 		62ADA7812B0B1AE500440407 /* libExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		62ADA79B2B0B1CCA00440407 /* libViewModifiers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libViewModifiers.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62ADA79C2B0B1CCA00440407 /* libViewModifiers.a in Frameworks */,
 				629573A72B01BDD60005B0A9 /* Alamofire in Frameworks */,
 				62ADA7822B0B1AE500440407 /* libExtensions.a in Frameworks */,
 			);
@@ -295,6 +298,7 @@
 		62ADA7802B0B1AE500440407 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				62ADA79B2B0B1CCA00440407 /* libViewModifiers.a */,
 				62ADA7812B0B1AE500440407 /* libExtensions.a */,
 			);
 			name = Frameworks;

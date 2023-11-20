@@ -32,6 +32,7 @@
 		629D15CA2B05B3F600138089 /* AlbumDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D15C92B05B3F600138089 /* AlbumDetailViewModel.swift */; };
 		629D15CC2B05D3AF00138089 /* AlbumTrackItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D15CB2B05D3AF00138089 /* AlbumTrackItemView.swift */; };
 		62ADA7852B0B1B2C00440407 /* libExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62ADA7842B0B1B2C00440407 /* libExtensions.a */; };
+		62ADA79E2B0B1CD200440407 /* libViewModifiers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62ADA79D2B0B1CD200440407 /* libViewModifiers.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		629D15C92B05B3F600138089 /* AlbumDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewModel.swift; sourceTree = "<group>"; };
 		629D15CB2B05D3AF00138089 /* AlbumTrackItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTrackItemView.swift; sourceTree = "<group>"; };
 		62ADA7842B0B1B2C00440407 /* libExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		62ADA79D2B0B1CD200440407 /* libViewModifiers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libViewModifiers.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				62ADA7852B0B1B2C00440407 /* libExtensions.a in Frameworks */,
 				621861002B04996300A75DE0 /* Moya in Frameworks */,
 				621860FE2B04996300A75DE0 /* CombineMoya in Frameworks */,
+				62ADA79E2B0B1CD200440407 /* libViewModifiers.a in Frameworks */,
 				621861042B04996300A75DE0 /* RxMoya in Frameworks */,
 				621861022B04996300A75DE0 /* ReactiveMoya in Frameworks */,
 			);
@@ -250,6 +253,7 @@
 		62ADA7832B0B1B2C00440407 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				62ADA79D2B0B1CD200440407 /* libViewModifiers.a */,
 				62ADA7842B0B1B2C00440407 /* libExtensions.a */,
 			);
 			name = Frameworks;
