@@ -1,13 +1,13 @@
 //
 //  Codable+Extension.swift
-//  SwiftUI-MVVM
+//  Extensions
 //
-//  Created by Hangyeol on 11/15/23.
+//  Created by Hangyeol on 11/20/23.
 //
 
 import Foundation
 
-extension Encodable {
+public extension Encodable {
     var parameters: [String: Any]? {
         guard let data = try? JSONEncoder().encode(self) else {
             return nil
@@ -16,4 +16,3 @@ extension Encodable {
         return jsonObject.flatMap { $0 as? [String: Any] }
     }
 }
-

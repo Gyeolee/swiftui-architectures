@@ -6,6 +6,7 @@
 //
 
 import Alamofire
+import Extensions
 
 class APIMonitor: EventMonitor {
     func requestDidFinish(_ request: Request) {

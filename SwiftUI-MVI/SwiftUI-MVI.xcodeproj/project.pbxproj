@@ -26,9 +26,7 @@
 		629573AB2B01BE260005B0A9 /* APIMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573AA2B01BE260005B0A9 /* APIMonitor.swift */; };
 		629573B12B01BEB40005B0A9 /* TokenClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573B02B01BEB40005B0A9 /* TokenClient.swift */; };
 		629573BB2B01BF650005B0A9 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573BA2B01BF650005B0A9 /* APIs.swift */; };
-		629573BE2B01BFB30005B0A9 /* Codable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573BD2B01BFB30005B0A9 /* Codable+Extension.swift */; };
 		629573C12B01BFE10005B0A9 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573C02B01BFE10005B0A9 /* LocalStorage.swift */; };
-		629573C32B01BFFF0005B0A9 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573C22B01BFFF0005B0A9 /* Data+Extension.swift */; };
 		629573C52B01C1E50005B0A9 /* TokenDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573C42B01C1E50005B0A9 /* TokenDataModel.swift */; };
 		629573C92B01C2460005B0A9 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573C82B01C2460005B0A9 /* ErrorModel.swift */; };
 		629573CB2B01DB640005B0A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573CA2B01DB640005B0A9 /* AppDelegate.swift */; };
@@ -39,6 +37,7 @@
 		629573D82B01E7390005B0A9 /* NewReleasesModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573D72B01E7390005B0A9 /* NewReleasesModelProtocol.swift */; };
 		629573DA2B01E73E0005B0A9 /* NewReleasesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573D92B01E73E0005B0A9 /* NewReleasesModel.swift */; };
 		629573DE2B01E89F0005B0A9 /* NewReleaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573DD2B01E89F0005B0A9 /* NewReleaseView.swift */; };
+		62ADA7822B0B1AE500440407 /* libExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62ADA7812B0B1AE500440407 /* libExtensions.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,9 +60,7 @@
 		629573AA2B01BE260005B0A9 /* APIMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMonitor.swift; sourceTree = "<group>"; };
 		629573B02B01BEB40005B0A9 /* TokenClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenClient.swift; sourceTree = "<group>"; };
 		629573BA2B01BF650005B0A9 /* APIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
-		629573BD2B01BFB30005B0A9 /* Codable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Extension.swift"; sourceTree = "<group>"; };
 		629573C02B01BFE10005B0A9 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
-		629573C22B01BFFF0005B0A9 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		629573C42B01C1E50005B0A9 /* TokenDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenDataModel.swift; sourceTree = "<group>"; };
 		629573C82B01C2460005B0A9 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		629573CA2B01DB640005B0A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +71,7 @@
 		629573D72B01E7390005B0A9 /* NewReleasesModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesModelProtocol.swift; sourceTree = "<group>"; };
 		629573D92B01E73E0005B0A9 /* NewReleasesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesModel.swift; sourceTree = "<group>"; };
 		629573DD2B01E89F0005B0A9 /* NewReleaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleaseView.swift; sourceTree = "<group>"; };
+		62ADA7812B0B1AE500440407 /* libExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +80,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				629573A72B01BDD60005B0A9 /* Alamofire in Frameworks */,
+				62ADA7822B0B1AE500440407 /* libExtensions.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +92,7 @@
 			children = (
 				6225C8632AFDEF40005ED943 /* SwiftUI-MVI */,
 				6225C8622AFDEF40005ED943 /* Products */,
+				62ADA7802B0B1AE500440407 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,7 +107,6 @@
 		6225C8632AFDEF40005ED943 /* SwiftUI-MVI */ = {
 			isa = PBXGroup;
 			children = (
-				629573BC2B01BF960005B0A9 /* Extensions */,
 				6295739F2B01B7660005B0A9 /* Data */,
 				629573942B01B15F0005B0A9 /* UI */,
 				629573CA2B01DB640005B0A9 /* AppDelegate.swift */,
@@ -242,15 +241,6 @@
 			path = Clients;
 			sourceTree = "<group>";
 		};
-		629573BC2B01BF960005B0A9 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				629573BD2B01BFB30005B0A9 /* Codable+Extension.swift */,
-				629573C22B01BFFF0005B0A9 /* Data+Extension.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		629573BF2B01BFD70005B0A9 /* LocalStorage */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +290,14 @@
 				629573DD2B01E89F0005B0A9 /* NewReleaseView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		62ADA7802B0B1AE500440407 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62ADA7812B0B1AE500440407 /* libExtensions.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,7 +379,6 @@
 				629573A92B01BDF50005B0A9 /* APIInterceptor.swift in Sources */,
 				6225C8672AFDEF40005ED943 /* RootView.swift in Sources */,
 				6295739E2B01B3F90005B0A9 /* AlbumDetailView.swift in Sources */,
-				629573BE2B01BFB30005B0A9 /* Codable+Extension.swift in Sources */,
 				629573BB2B01BF650005B0A9 /* APIs.swift in Sources */,
 				629573932B01AFBA0005B0A9 /* Navigation.swift in Sources */,
 				629573C92B01C2460005B0A9 /* ErrorModel.swift in Sources */,
@@ -406,7 +403,6 @@
 				629573A42B01BDA20005B0A9 /* APIAgent.swift in Sources */,
 				629573D42B01E72C0005B0A9 /* NewReleasesIntentProtocol.swift in Sources */,
 				629573B12B01BEB40005B0A9 /* TokenClient.swift in Sources */,
-				629573C32B01BFFF0005B0A9 /* Data+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

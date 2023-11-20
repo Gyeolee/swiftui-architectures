@@ -1,13 +1,13 @@
 //
 //  Data+Extension.swift
-//  SwiftUI-MVI
+//  Extensions
 //
-//  Created by Hangyeol on 11/13/23.
+//  Created by Hangyeol on 11/20/23.
 //
 
 import Foundation
 
-extension Data {
+public extension Data {
     var prettyPrintedString: String? {
         guard let object = try? JSONSerialization.jsonObject(with: self, options: []),
               let data = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted]),
