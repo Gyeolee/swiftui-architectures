@@ -30,6 +30,7 @@ struct NewReleasesView: View {
             }
             .padding(.vertical)
         }
+        .loading(viewModel.isLoading)
         .onlyOnceTask {
             await viewModel.fetchNewReleases()
         }

@@ -33,6 +33,7 @@
 		629D15CC2B05D3AF00138089 /* AlbumTrackItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D15CB2B05D3AF00138089 /* AlbumTrackItemView.swift */; };
 		62ADA7852B0B1B2C00440407 /* libExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62ADA7842B0B1B2C00440407 /* libExtensions.a */; };
 		62ADA79E2B0B1CD200440407 /* libViewModifiers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62ADA79D2B0B1CD200440407 /* libViewModifiers.a */; };
+		62F495E42B0C3FA2006C40EF /* ViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F495E32B0C3FA2006C40EF /* ViewModelable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		629D15CB2B05D3AF00138089 /* AlbumTrackItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTrackItemView.swift; sourceTree = "<group>"; };
 		62ADA7842B0B1B2C00440407 /* libExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		62ADA79D2B0B1CD200440407 /* libViewModifiers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libViewModifiers.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		62F495E32B0C3FA2006C40EF /* ViewModelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		621860F02B04952600A75DE0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				62F495E32B0C3FA2006C40EF /* ViewModelable.swift */,
 				621860F82B04961F00A75DE0 /* NewReleases */,
 				629D15C82B05B3ED00138089 /* AlbumDetail */,
 			);
@@ -343,6 +346,7 @@
 				6218610F2B04A10900A75DE0 /* APIClient.swift in Sources */,
 				621861112B04AA0D00A75DE0 /* APILoggingPlugin.swift in Sources */,
 				629D15C22B05B33700138089 /* AlbumDetailModel.swift in Sources */,
+				62F495E42B0C3FA2006C40EF /* ViewModelable.swift in Sources */,
 				629D15B92B05A2B700138089 /* LocalStorage.swift in Sources */,
 				629D15CC2B05D3AF00138089 /* AlbumTrackItemView.swift in Sources */,
 				621860E02B04937D00A75DE0 /* RootView.swift in Sources */,

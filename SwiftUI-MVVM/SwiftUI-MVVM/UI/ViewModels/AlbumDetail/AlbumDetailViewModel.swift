@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-final class AlbumDetailViewModel: ObservableObject {
+final class AlbumDetailViewModel: ObservableObject, ViewModelable {
+    @MainActor @Published var isLoading: Bool = true
     @MainActor @Published var detailModel: AlbumDetailModel = .init(title: "title", imageUrl: "imageUrl", artistName: "artistName")
     @MainActor @Published var trackModels: [AlbumDetailTrackModel] = []
     
@@ -26,5 +27,7 @@ final class AlbumDetailViewModel: ObservableObject {
         } catch {
             print(error)
         }
+        
+        await loading(false)
     }
 }

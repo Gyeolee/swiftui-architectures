@@ -24,7 +24,7 @@ struct AlbumDetailView: View {
                             .resizable()
                             .frame(width: 300, height: 300)
                     } else if let _ = phase.error {
-                        Color.red
+                        Color.gray
                     } else {
                         ProgressView()
                     }
@@ -54,6 +54,7 @@ struct AlbumDetailView: View {
                 }
             }
         }
+        .loading(viewModel.isLoading)
         .task {
             await viewModel.fetchAlbumDetail(id: id)
         }

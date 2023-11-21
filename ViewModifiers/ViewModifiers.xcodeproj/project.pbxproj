@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		62ADA7A02B0B1D2100440407 /* TaskViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ADA79F2B0B1D2100440407 /* TaskViewModifier.swift */; };
+		62F495E22B0C2F49006C40EF /* LoadingViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F495E12B0C2F49006C40EF /* LoadingViewModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		62ADA7912B0B1BB500440407 /* libViewModifiers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libViewModifiers.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		62ADA79F2B0B1D2100440407 /* TaskViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModifier.swift; sourceTree = "<group>"; };
+		62F495E12B0C2F49006C40EF /* LoadingViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				62ADA79F2B0B1D2100440407 /* TaskViewModifier.swift */,
+				62F495E12B0C2F49006C40EF /* LoadingViewModifier.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -121,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62F495E22B0C2F49006C40EF /* LoadingViewModifier.swift in Sources */,
 				62ADA7A02B0B1D2100440407 /* TaskViewModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

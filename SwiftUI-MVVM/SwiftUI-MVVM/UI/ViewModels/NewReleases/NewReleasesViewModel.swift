@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-final class NewReleasesViewModel: ObservableObject {
+final class NewReleasesViewModel: ObservableObject, ViewModelable {
+    @MainActor @Published var isLoading: Bool = true
     @MainActor @Published var newReleaseModels: [NewReleaseModel] = []
     
     private var offset: Int = 0
@@ -26,5 +27,7 @@ final class NewReleasesViewModel: ObservableObject {
         } catch {
             print(error)
         }
+        
+        await loading(false)
     }
 }
