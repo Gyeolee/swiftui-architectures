@@ -11,9 +11,7 @@
 		6225C8672AFDEF40005ED943 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6225C8662AFDEF40005ED943 /* RootView.swift */; };
 		6225C8692AFDEF41005ED943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6225C8682AFDEF41005ED943 /* Assets.xcassets */; };
 		6225C86C2AFDEF41005ED943 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6225C86B2AFDEF41005ED943 /* Preview Assets.xcassets */; };
-		624420EF2B02FC340014BD51 /* AlbumDetailIntentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624420EE2B02FC340014BD51 /* AlbumDetailIntentProtocol.swift */; };
 		624420F12B02FC3A0014BD51 /* AlbumDetailIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624420F02B02FC3A0014BD51 /* AlbumDetailIntent.swift */; };
-		624420F32B02FC420014BD51 /* AlbumDetailModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624420F22B02FC420014BD51 /* AlbumDetailModelProtocol.swift */; };
 		624420F52B02FC470014BD51 /* AlbumDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624420F42B02FC470014BD51 /* AlbumDetailModel.swift */; };
 		624420F72B030AB30014BD51 /* AlbumDetailTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624420F62B030AB30014BD51 /* AlbumDetailTrackView.swift */; };
 		629573912B01AE6A0005B0A9 /* MVIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573902B01AE6A0005B0A9 /* MVIContainer.swift */; };
@@ -32,9 +30,7 @@
 		629573CB2B01DB640005B0A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573CA2B01DB640005B0A9 /* AppDelegate.swift */; };
 		629573CD2B01DEB60005B0A9 /* AlbumsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573CC2B01DEB60005B0A9 /* AlbumsClient.swift */; };
 		629573CF2B01DEFA0005B0A9 /* AlbumDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573CE2B01DEFA0005B0A9 /* AlbumDataModel.swift */; };
-		629573D42B01E72C0005B0A9 /* NewReleasesIntentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573D32B01E72C0005B0A9 /* NewReleasesIntentProtocol.swift */; };
 		629573D62B01E7320005B0A9 /* NewReleasesIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573D52B01E7320005B0A9 /* NewReleasesIntent.swift */; };
-		629573D82B01E7390005B0A9 /* NewReleasesModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573D72B01E7390005B0A9 /* NewReleasesModelProtocol.swift */; };
 		629573DA2B01E73E0005B0A9 /* NewReleasesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573D92B01E73E0005B0A9 /* NewReleasesModel.swift */; };
 		629573DE2B01E89F0005B0A9 /* NewReleaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629573DD2B01E89F0005B0A9 /* NewReleaseView.swift */; };
 		62ADA7822B0B1AE500440407 /* libExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62ADA7812B0B1AE500440407 /* libExtensions.a */; };
@@ -47,9 +43,7 @@
 		6225C8662AFDEF40005ED943 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		6225C8682AFDEF41005ED943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6225C86B2AFDEF41005ED943 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		624420EE2B02FC340014BD51 /* AlbumDetailIntentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailIntentProtocol.swift; sourceTree = "<group>"; };
 		624420F02B02FC3A0014BD51 /* AlbumDetailIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailIntent.swift; sourceTree = "<group>"; };
-		624420F22B02FC420014BD51 /* AlbumDetailModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailModelProtocol.swift; sourceTree = "<group>"; };
 		624420F42B02FC470014BD51 /* AlbumDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailModel.swift; sourceTree = "<group>"; };
 		624420F62B030AB30014BD51 /* AlbumDetailTrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailTrackView.swift; sourceTree = "<group>"; };
 		629573902B01AE6A0005B0A9 /* MVIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVIContainer.swift; sourceTree = "<group>"; };
@@ -67,9 +61,7 @@
 		629573CA2B01DB640005B0A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		629573CC2B01DEB60005B0A9 /* AlbumsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsClient.swift; sourceTree = "<group>"; };
 		629573CE2B01DEFA0005B0A9 /* AlbumDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDataModel.swift; sourceTree = "<group>"; };
-		629573D32B01E72C0005B0A9 /* NewReleasesIntentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesIntentProtocol.swift; sourceTree = "<group>"; };
 		629573D52B01E7320005B0A9 /* NewReleasesIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesIntent.swift; sourceTree = "<group>"; };
-		629573D72B01E7390005B0A9 /* NewReleasesModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesModelProtocol.swift; sourceTree = "<group>"; };
 		629573D92B01E73E0005B0A9 /* NewReleasesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesModel.swift; sourceTree = "<group>"; };
 		629573DD2B01E89F0005B0A9 /* NewReleaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleaseView.swift; sourceTree = "<group>"; };
 		62ADA7812B0B1AE500440407 /* libExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,24 +129,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		624420EC2B02FBF90014BD51 /* Intent */ = {
-			isa = PBXGroup;
-			children = (
-				624420EE2B02FC340014BD51 /* AlbumDetailIntentProtocol.swift */,
-				624420F02B02FC3A0014BD51 /* AlbumDetailIntent.swift */,
-			);
-			path = Intent;
-			sourceTree = "<group>";
-		};
-		624420ED2B02FBFC0014BD51 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				624420F22B02FC420014BD51 /* AlbumDetailModelProtocol.swift */,
-				624420F42B02FC470014BD51 /* AlbumDetailModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		629573942B01B15F0005B0A9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,8 +161,8 @@
 		629573972B01B2820005B0A9 /* NewReleases */ = {
 			isa = PBXGroup;
 			children = (
-				629573D12B01E1A00005B0A9 /* Model */,
-				629573D02B01E19D0005B0A9 /* Intent */,
+				629573D92B01E73E0005B0A9 /* NewReleasesModel.swift */,
+				629573D52B01E7320005B0A9 /* NewReleasesIntent.swift */,
 				629573D22B01E1A50005B0A9 /* View */,
 			);
 			path = NewReleases;
@@ -197,8 +171,8 @@
 		629573982B01B2860005B0A9 /* AlbumDetail */ = {
 			isa = PBXGroup;
 			children = (
-				624420ED2B02FBFC0014BD51 /* Model */,
-				624420EC2B02FBF90014BD51 /* Intent */,
+				624420F42B02FC470014BD51 /* AlbumDetailModel.swift */,
+				624420F02B02FC3A0014BD51 /* AlbumDetailIntent.swift */,
 				624420EB2B02FBF50014BD51 /* View */,
 			);
 			path = AlbumDetail;
@@ -266,24 +240,6 @@
 				629573C82B01C2460005B0A9 /* ErrorModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		629573D02B01E19D0005B0A9 /* Intent */ = {
-			isa = PBXGroup;
-			children = (
-				629573D32B01E72C0005B0A9 /* NewReleasesIntentProtocol.swift */,
-				629573D52B01E7320005B0A9 /* NewReleasesIntent.swift */,
-			);
-			path = Intent;
-			sourceTree = "<group>";
-		};
-		629573D12B01E1A00005B0A9 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				629573D72B01E7390005B0A9 /* NewReleasesModelProtocol.swift */,
-				629573D92B01E73E0005B0A9 /* NewReleasesModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		629573D22B01E1A50005B0A9 /* View */ = {
@@ -393,8 +349,6 @@
 				629573CF2B01DEFA0005B0A9 /* AlbumDataModel.swift in Sources */,
 				629573AB2B01BE260005B0A9 /* APIMonitor.swift in Sources */,
 				624420F72B030AB30014BD51 /* AlbumDetailTrackView.swift in Sources */,
-				624420EF2B02FC340014BD51 /* AlbumDetailIntentProtocol.swift in Sources */,
-				629573D82B01E7390005B0A9 /* NewReleasesModelProtocol.swift in Sources */,
 				629573DE2B01E89F0005B0A9 /* NewReleaseView.swift in Sources */,
 				624420F12B02FC3A0014BD51 /* AlbumDetailIntent.swift in Sources */,
 				629573DA2B01E73E0005B0A9 /* NewReleasesModel.swift in Sources */,
@@ -402,10 +356,8 @@
 				629573CB2B01DB640005B0A9 /* AppDelegate.swift in Sources */,
 				624420F52B02FC470014BD51 /* AlbumDetailModel.swift in Sources */,
 				629573C12B01BFE10005B0A9 /* LocalStorage.swift in Sources */,
-				624420F32B02FC420014BD51 /* AlbumDetailModelProtocol.swift in Sources */,
 				629573912B01AE6A0005B0A9 /* MVIContainer.swift in Sources */,
 				629573A42B01BDA20005B0A9 /* APIAgent.swift in Sources */,
-				629573D42B01E72C0005B0A9 /* NewReleasesIntentProtocol.swift in Sources */,
 				629573B12B01BEB40005B0A9 /* TokenClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

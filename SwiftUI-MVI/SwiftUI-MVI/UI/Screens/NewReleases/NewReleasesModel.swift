@@ -7,6 +7,20 @@
 
 import SwiftUI
 
+// MARK: - Protocols
+
+protocol NewReleasesModelStateProtocol {
+    var newReleaseStates: [NewReleaseState] { get }
+}
+
+@MainActor
+protocol NewReleasesModelActionsProtocol {
+    func update(_ data: [AlbumItemResponseDataModel])
+}
+
+
+// MARK: - Model
+
 final class NewReleasesModel: ObservableObject, NewReleasesModelStateProtocol {
     @Published var newReleaseStates: [NewReleaseState] = []
 }

@@ -7,6 +7,15 @@
 
 import Foundation
 
+// MARK: - Protocol
+
+protocol AlbumDetailIntentProtocol {
+    func viewOnTask() async
+}
+
+
+// MARK: - Intent
+
 class AlbumDetailIntent: AlbumDetailIntentProtocol {
     private let actionsModel: AlbumDetailModelActionsProtocol
     private let albumsClient: AlbumsClient = .init()

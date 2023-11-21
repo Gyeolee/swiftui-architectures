@@ -7,6 +7,16 @@
 
 import Foundation
 
+// MARK: - Protocol
+
+protocol NewReleasesIntentProtocol {
+    func viewOnTask() async
+    func lastItemViewOnTask() async
+}
+
+
+// MARK: Intent
+
 class NewReleasesIntent: NewReleasesIntentProtocol {
     private let actionsModel: NewReleasesModelActionsProtocol
     private let albumsClient: AlbumsClient = .init()

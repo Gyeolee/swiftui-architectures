@@ -7,6 +7,21 @@
 
 import SwiftUI
 
+// MARK: - Protocols
+
+protocol AlbumDetailModelStateProtocol {
+    var detailState: AlbumDetailState { get }
+    var trackStates: [AlbumDetailTrackState] { get }
+}
+
+@MainActor
+protocol AlbumDetailModelActionsProtocol {
+    func update(_ data: AlbumDetailResponseDataModel)
+}
+
+
+// MARK: - Model
+
 final class AlbumDetailModel: ObservableObject, AlbumDetailModelStateProtocol {
     @Published var detailState: AlbumDetailState = .init(title: "", imageUrl: "", artistName: "")
     @Published var trackStates: [AlbumDetailTrackState] = []
