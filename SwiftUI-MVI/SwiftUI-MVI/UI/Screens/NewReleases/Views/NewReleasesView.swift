@@ -33,6 +33,7 @@ struct NewReleasesView: View {
             }
             .padding(.vertical)
         }
+        .loading(model.isLoading)
         .onlyOnceTask {
             await intent.viewOnTask()
         }

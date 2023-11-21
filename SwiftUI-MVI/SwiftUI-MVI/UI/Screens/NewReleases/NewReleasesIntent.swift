@@ -46,5 +46,7 @@ extension NewReleasesIntent {
         } catch {
             print(error)
         }
+        
+        await actionsModel.loading(false)
     }
 }
