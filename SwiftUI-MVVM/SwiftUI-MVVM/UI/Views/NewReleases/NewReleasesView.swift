@@ -30,6 +30,7 @@ struct NewReleasesView: View {
             }
             .padding(.vertical)
         }
+        .navigationBar(type: .main(title: "New Releases"))
         .loading(viewModel.isLoading)
         .onlyOnceTask {
             await viewModel.fetchNewReleases()

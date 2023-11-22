@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ViewModifiers
 
 struct AlbumDetailView: View {
     @EnvironmentObject var navigator: Navigator
@@ -46,14 +47,7 @@ struct AlbumDetailView: View {
                 }
             }
         }
-        .navigationBarBackButtonHidden(true)
-        .toolbar {
-            ToolbarItem(placement: .navigation) {
-                Button(action: navigator.pop) {
-                    Image(systemName: "chevron.backward")
-                }
-            }
-        }
+        .navigationBar(type: .detail(title: model.title, backButtonAction: { navigator.pop() }))
         .loading(viewModel.isLoading)
         .task {
             await viewModel.fetchAlbumDetail(id: id)
