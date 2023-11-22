@@ -40,6 +40,7 @@ struct NavigationBarView: View {
             case let .main(title):
                 Text(title)
                     .font(.title)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 
             case let .detail(title, backButtonAction):
                 Button {
@@ -53,6 +54,8 @@ struct NavigationBarView: View {
                         .font(.title)
                         .frame(maxWidth: .infinity)
                 }
+                
+                Spacer()
             }
         }
         .padding(.horizontal, 16)

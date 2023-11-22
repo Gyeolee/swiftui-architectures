@@ -23,10 +23,10 @@ enum NavigationViewType: Hashable {
 // MARK: - Navigator
 
 final class Navigator: ObservableObject {
-    @Published private var navigationStack: [NavigationViewType] = []
+    @Published private var navigationStack: NavigationPath = .init()
     
-    var path: Binding<[NavigationViewType]> {
-        Binding<[NavigationViewType]>(
+    var path: Binding<NavigationPath> {
+        Binding<NavigationPath>(
             get: { self.navigationStack },
             set: { _ in }
         )
@@ -42,10 +42,11 @@ extension Navigator {
         guard navigationStack.count > 0 else {
             return
         }
+        
         navigationStack.removeLast()
     }
     
     func popToRoot() {
-        navigationStack.removeAll()
+        navigationStack = .init()
     }
 }
